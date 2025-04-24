@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagamento via Pix - Trail Life</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: #f8f9fa;
+    }
+    textarea {
+      width: 90%;
+      max-width: 600px;
+      height: 120px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 15px;
+      cursor: pointer;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 8px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pagamento via Pix</h1>
+  <p>Copie o código abaixo e cole no seu aplicativo bancário:</p>
+  <textarea id="pixCode" readonly>00020126880014br.gov.bcb.pix0129traillifeassessoria@gmail.com0233Trail Life Assessoria  Plano Plus27600016BR.COM.PAGSEGURO0136404430AD-AA90-40BA-A6F1-93806B353526520456975303986540599.905802BR5923Dilvano Leder de Franca6015ALMIRANTE TAMAN62290525PAGS000009990250424180098630453C5</textarea><br>
+  <button onclick="copyPix()">Copiar código Pix</button>
+
+  <script>
+    function copyPix() {
+      const pix = document.getElementById('pixCode');
+      pix.select();
+      document.execCommand('copy');
+      alert("Código Pix copiado!");
+    }
+  </script>
+</body>
+</html>
